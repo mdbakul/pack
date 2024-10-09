@@ -1,0 +1,227 @@
+@use "../../utilities" as *;
+
+// header nav here
+
+.header {
+    &__menu {
+        nav {
+            >ul {
+                @extend %align-items-center, %mb-0, %justify-end, %mp-0;
+
+                @include breakpoint(lg) {
+                    display: flex;
+                }
+
+                li {
+                    @extend %list-none, %p-rel;
+                    @include padding(10px 20px);
+
+                    @include breakpoint(lg) {
+                        @include padding(20px 10px);
+                    }
+
+                    a {
+                        @extend %text-none, %black-color;
+
+                        @include breakpoint(lg) {
+                            @include padding(35px 10px);
+                        }
+                    }
+
+                    ul {
+                        @extend %top-100, %p-left-0, %w-150;
+                        padding-left: 0;
+                        @include transition(.5s);
+
+                        @include breakpoint(lg) {
+                            position: absolute;
+                            opacity: 0;
+                            visibility: hidden;
+                            background: #000;
+                            left: 30%;
+                        }
+
+                        @include breakpoint(max-lg) {
+                            display: none;
+                        }
+
+                        li {
+                            @extend %p-0;
+
+                            a {
+                                @extend %px-10, %black-color, %d-inline-block, %py-im-8, %wd-100;
+
+                                @include breakpoint(lg) {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        ul {
+                            left: 0;
+
+                            @include breakpoint(lg) {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        &--mobilebg {
+            @include breakpoint(max-lg) {
+                // background: #fff;
+                // box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            }
+        }
+    }
+
+    &__mobilebar {
+        @extend %flex, %justify-end;
+        background: green;
+        @extend %p-10, %w-39, %pointer;
+        margin-left: auto;
+
+        i {
+            @extend %white-color, %pointer;
+            @include font-size(20px);
+        }
+    }
+}
+
+.tpoffcanvas {
+    @extend %p-top-0, %p-bottom-0, %v-o-none, %wd-100, %bg-white;
+    position: fixed;
+    right: -100%;
+    z-index: 999999;
+    scrollbar-width: none;
+    transition: 1s ease-in-out;
+    overflow-y: scroll;
+
+    &.opened {
+        @extend %p-right-0;
+        -webkit-transition: all .6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        -moz-transition: all .6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        transition: all .6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        transition-duration: 1s;
+    }
+
+    &.opened {
+        @extend %v-o-viseble;
+    }
+
+    &__logo {
+        @extend %py-20;
+
+        a {
+            h5 {
+                @extend %white-color;
+            }
+        }
+    }
+
+    &__close-btn {
+        margin-left: auto;
+        @extend %w-50, %h-50, %lheight-50, %text-center, %mr-30;
+        background: green;
+
+        button {
+            background: none;
+            border: none;
+
+            i {
+                @include font-size(20px);
+                @extend %white-color;
+            }
+        }
+    }
+
+    &__header {
+        @extend %bg-white;
+    }
+}
+
+
+.menu-item-has-children {
+    >a {
+        @extend %rel;
+
+        &::after {
+            @extend %abs, %bg-black, %top-50, %w-10;
+            transform: translateY(-50%);
+            right: -54px;
+            height: 2px;
+        }
+
+        &::before {
+            @extend %abs, %bg-black, %h-10;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -50px;
+            width: 2px;
+            @include transition($transition2);
+        }
+
+        @include breakpoint(lg) {
+            &::after {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -4px;
+                width: 10px;
+                height: 2px;
+                background: $theme-color;
+            }
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0px;
+                width: 2px;
+                height: 10px;
+                background: $theme-color;
+                @include transition($transition2);
+            }
+        }
+    }
+
+    &:hover {
+        >a {
+            &:before {
+                @include breakpoint(lg) {
+                    transform: translate(-50%, -50%) rotate(90deg);
+                    opacity: 0;
+                }
+            }
+
+            &::after {
+                background: $theme-color;
+            }
+        }
+    }
+
+    &.open {
+        >a {
+
+            &::after,
+            &::before {
+                @extend %p-color;
+            }
+
+            &:before {
+                @include breakpoint(max-lg) {
+                    transform: translate(-50%, -50%) rotate(90deg);
+                    opacity: 0;
+
+                }
+            }
+        }
+    }
+}

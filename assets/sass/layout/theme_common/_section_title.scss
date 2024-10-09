@@ -1,0 +1,15 @@
+@use "../../utilities" as *;
+
+.sectin {
+    &__title {
+
+        h1 {
+            @extend %text-500;
+            @extend %border-4, %my-13;
+        }
+
+        p {
+            @extend %text-400;
+        }
+    }
+}
