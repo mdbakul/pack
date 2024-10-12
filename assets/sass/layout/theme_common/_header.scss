@@ -3,6 +3,18 @@
 // header nav here
 
 .header {
+    &__top {
+        .left {
+            background: red;
+            @extend %mt-30;
+        }
+
+        .right {
+            background: green;
+            @extend %mt-60;
+        }
+    }
+
     &__menu {
         nav {
             >ul {

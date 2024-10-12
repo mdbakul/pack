@@ -6,62 +6,124 @@
 
 @for $i from 0 through 200 {
     %mt-#{1 * $i} {
-        @include margin-top(1px *$i);
+        @if $i <=30 {
+            margin-top: 1px *$i;
+        }
+
+        @else {
+            @include margin-top(1px *$i);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %mt-im-#{1 * $i} {
-        @include margin-top(1px *$i !important);
+
+        @if $i <=30 {
+            margin-top: 1px *$i !important;
+        }
+
+        @else {
+            @include margin-top(1px *$i !important);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %mb-#{1 * $i} {
-        @include margin-bottom(1px *$i);
+
+        @if $i <=30 {
+            margin-bottom: 1px *$i;
+        }
+
+        @else {
+            @include margin-bottom(1px *$i);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %mb-im-#{1 * $i} {
-        @include margin-bottom(1px *$i !important);
+        @if $i <=30 {
+            margin-bottom: 1px *$i !important;
+        }
+
+        @else {
+            @include margin-bottom(1px *$i !important);
+        }
     }
 }
 
 
 @for $i from 0 through 200 {
     %ml-#{1 * $i} {
-        @include margin-left(1px *$i);
+        @if $i <=30 {
+            margin-left: 1px *$i;
+        }
+
+        @else {
+            @include margin-left(1px *$i);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %ml-im-#{1 * $i} {
-        @include margin-left(1px *$i !important);
+        @if $i <=30 {
+            margin-left: 1px *$i !important;
+        }
+
+        @else {
+            @include margin-left(1px *$i !important);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %mr-#{1 * $i} {
-        @include margin-right(1px *$i);
+        @if $i <=30 {
+            margin-right: 1px *$i;
+        }
+
+        @else {
+            @include margin-right(1px *$i);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %mr-im-#{1 * $i} {
-        @include margin-right(1px *$i !important);
+        @if $i <=30 {
+            margin-right: 1px *$i !important;
+        }
+
+        @else {
+            @include margin-right(1px *$i !important);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %m-#{1 * $i} {
-        @include margin(1px *$i);
+        @if $i <=30 {
+            margin: 1px *$i;
+        }
+
+        @else {
+            @include margin(1px *$i);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %m-im-#{1 * $i} {
-        @include margin(1px *$i !important);
+        @if $i <=30 {
+            margin: 1px *$i !important;
+        }
+
+        @else {
+            @include margin(1px *$i !important);
+        }
     }
 }
 
@@ -95,49 +157,98 @@
 -----------------------------------------*/
 @for $i from 0 through 200 {
     %pt-#{1 * $i} {
-        @include padding-top(1px *$i);
+        @if $i <=30 {
+            padding-top: 1px *$i;
+        }
+
+        @else {
+            @include padding-top(1px *$i);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %pt-im-#{1 * $i} {
-        @include padding-top(1px *$i !important);
+        @if $i <=30 {
+            padding-top: 1px *$i !important;
+        }
+
+        @else {
+            @include padding-top(1px *$i !important);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %pb-#{1 * $i} {
-        @include padding-bottom(1px *$i);
+
+        @if $i <=30 {
+            padding-bottom: 1px *$i;
+        }
+
+        @else {
+            @include padding-bottom(1px *$i);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %pb-im-#{1 * $i} {
-        @include padding-bottom(1px *$i !important);
+        @if $i <=30 {
+            padding-bottom: 1px *$i !important;
+        }
+
+        @else {
+            @include padding-bottom(1px *$i !important);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %pl-#{1 * $i} {
-        @include padding-left(1px *$i);
+        @if $i <=30 {
+            padding-left: 1px *$i;
+        }
+
+        @else {
+            @include padding-left(1px *$i);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %pl-im-#{1 * $i} {
-        @include padding-left(1px *$i !important);
+        @if $i <=30 {
+            padding-left: 1px *$i !important;
+        }
+
+        @else {
+            @include padding-left(1px *$i !important);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %pr-#{1 * $i} {
-        @include padding-right(1px *$i);
+        @if $i <=30 {
+            padding-right: 1px *$i;
+        }
+
+        @else {
+            @include padding-right(1px *$i);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %pr-im-#{1 * $i} {
-        @include padding-right(1px *$i !important);
+        @if $i <=30 {
+            padding-right: 1px *$i !important;
+        }
+
+        @else {
+            @include padding-right(1px *$i !important);
+        }
     }
 }
 
@@ -167,13 +278,27 @@
 
 @for $i from 0 through 200 {
     %p-#{1 * $i} {
-        @include padding(1px *$i);
+
+        @if $i <=30 {
+            padding: 1px *$i;
+        }
+
+        @else {
+            @include padding(1px *$i);
+        }
     }
 }
 
 @for $i from 0 through 200 {
     %p-im-#{1 * $i} {
-        @include padding(1px *$i !important);
+
+        @if $i <=30 {
+            padding: 1px *$i !important;
+        }
+
+        @else {
+            @include padding(1px *$i !important);
+        }
     }
 }
 
@@ -251,7 +376,13 @@
 -----------------------------------------*/
 @for $i from 1 through 500 {
     %font-size-#{1 * $i} {
-        @include font-size(1px *$i);
+        @if $i <=20 {
+            font-size: 1px *$i;
+        }
+
+        @else {
+            @include font-size(1px *$i);
+        }
     }
 }
 
